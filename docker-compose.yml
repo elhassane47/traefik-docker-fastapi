@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  admin:
+    build: ./admin
+    volumes:
+      - ./admin:/app
+    ports:
+      - 8002:8002
+
+  user:
+    build: ./user
+    volumes:
+      - ./user:/app
+    ports:
+      - 8001:8001
